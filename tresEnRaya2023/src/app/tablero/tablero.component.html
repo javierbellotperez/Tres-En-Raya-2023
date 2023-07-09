@@ -1,0 +1,40 @@
+<div class="vP">
+  <div class="header">
+
+  </div>
+  <div class="layout">
+      <div class="gridContainer">
+          <div class="gridChild hijo1" (click)="cambioTurno(0,0,1)"></div>
+          <div class="gridChild hijo2" (click)="cambioTurno(0,1,2)"></div>
+          <div class="gridChild hijo3" (click)="cambioTurno(0,2,3)"></div>
+          <div class="gridChild hijo4" (click)="cambioTurno(1,0,4)"></div>
+          <div class="gridChild hijo5" (click)="cambioTurno(1,1,5)"></div>
+          <div class="gridChild hijo6" (click)="cambioTurno(1,2,6)"></div>
+          <div class="gridChild hijo7" (click)="cambioTurno(2,0,7)"></div>
+          <div class="gridChild hijo8" (click)="cambioTurno(2,1,8)"></div>
+          <div class="gridChild hijo9" (click)="cambioTurno(2,2,9)"></div>
+      </div>
+  </div>
+  <div class="layoutMarcador">
+      <div class="layoutMarcador__jugadoresContainer">
+          <div class="layoutMarcador__jugadores">
+              <div><h3 class="h3Personalizado"><strong>JUGADOR 1 (X)</strong></h3></div>
+              <div><h3 class="h3Personalizado"><strong>-</strong></h3></div>
+              <div><h3 class="h3Personalizado"><strong>JUGADOR 2 (O)</strong></h3></div>
+          </div>
+      </div>
+      <div class="layoutMarcador__puntuacionContainer">
+          <div class="layoutMarcador__puntuacion">
+              <div><h3 class="h3Personalizado"><strong class="strongX">{{partidasGanadasX}}</strong></h3></div>
+              <div><h3 class="h3Personalizado"><strong>{{numeroEmpates}}</strong></h3></div>
+              <div><h3 class="h3Personalizado"><strong class="strongO">{{partidasGanadasO}}</strong></h3></div>
+          </div>
+      </div>
+      <!-- <div class="layoutMarcador__modoDeJuego">
+          <button></button>
+      </div> -->
+
+
+  </div>
+</div>
+

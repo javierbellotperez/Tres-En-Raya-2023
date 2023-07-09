@@ -1,0 +1,300 @@
+*{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.vP{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+.header{
+  height: 10%;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items:center
+}
+.layout{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items:center
+}
+.layoutMarcador{
+  width: 100%;
+}
+.layoutMarcador__jugadoresContainer{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.layoutMarcador__jugadores{
+  /* margin-top:  20px; */
+  width: 35%;
+  display:flex;
+  justify-content: space-around   ;
+  align-items:center;
+}
+.layoutMarcador__puntuacionContainer{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.layoutMarcador__puntuacion{
+  width: 35%;
+  display:flex;
+  justify-content: space-around   ;
+  align-items:center;
+}
+.layoutMarcador__modoDeJuego{
+
+}
+.gridContainer{
+  height: 600px;
+  width: 600px  ;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 190px 190px 190px;
+  grid-template-columns: 190px 190px 190px;
+  justify-content: space-between;
+}
+.contadorPartida{
+  margin-left: 10px;
+  display:flex;
+  justify-content: center;
+  align-items:center
+}
+.gridChild{
+  box-sizing: content-box;
+  height: 190px;
+  width: 190px;
+  background-color:black;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.gridChild :hover{
+
+  background-color:black;
+  cursor:pointer;
+}
+.hijo1{
+
+}
+.hijo2{
+
+}
+.hijo3{
+
+}
+.hijo4{
+  margin-top: 15px;
+
+}
+.hijo5{
+  margin-top: 15px;
+
+}
+.hijo6{
+  margin-top: 15px;
+
+}
+.hijo7{
+  margin-top: 30px;
+}
+.hijo8{
+  margin-top: 30px;
+}
+.hijo9{
+  margin-top: 30px;
+}
+.equis::before{
+  content: " ";
+  /* width: 70%; */
+  width:85%;
+  /* height: 15px; */
+  height: 20px;
+  position: absolute;
+  background-color: blue;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  transform-origin: 0 0;
+  border-radius:2px;
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(0.5, 1.8, 0.1, 1.1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: animacionAparicionEquis;
+}
+
+.equis::after{
+  content: " ";
+  /* width: 70%; */
+  width: 85%;
+  /* height: 15px; */
+  height: 20px;
+  position: absolute;
+  background-color: blue;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: rotate(45deg) translate(-50%, -50%);
+  transform-origin: 0 0;
+  border-radius:2px;
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(0.5, 1.8, 0.1, 1.1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: animacionAparicionEquis;
+}
+
+@keyframes animacionAparicionEquis {
+  0% {
+      width: 0%;
+      height: 0px;
+  }
+  100% {
+      width: 85%;
+      height: 20px;
+  }
+}
+
+
+.circulo::before{
+  content: " ";
+  /* border: 15px solid black; */
+  border: 20px solid red;
+  border-radius: 50%;
+  display:block;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* margin: 17%; */
+  margin: 12%;
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(0.5, 1.8, 0.1, 1.1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: animacionAparicionCirculo;
+}
+@keyframes animacionAparicionCirculo {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+.empate{
+  animation: animacion-empate 1.5s ease-out ;
+  animation-iteration-count: 1;
+}
+@keyframes animacion-empate {
+
+  16.66%{
+      background-color:white;
+  }
+  33.3%{
+      background-color:black;
+  }
+  50%{
+      background-color:white;
+  }
+  66.66%{
+      background-color:black;
+  }
+  83.33%{
+      background-color:white;
+  }
+  100%{
+      background-color:black;
+  }
+}
+
+.victoria{
+  animation: animacion-equis-victoria 1.5s ease-out ;
+  animation-iteration-count: 1;
+
+}
+@keyframes animacion-equis-victoria {
+
+  16.66%{
+      background-color:white;
+  }
+  33.3%{
+      background-color:black;
+  }
+  50%{
+      background-color:white;
+  }
+  66.66%{
+      background-color:black;
+  }
+  83.33%{
+      background-color:white;
+  }
+  100%{
+      background-color:black;
+  }
+}
+
+.inhabilitarClicks{
+  pointer-events:none
+}
+.opacidadBajada{
+
+}
+
+.h3Personalizado{
+  font-size: 2em ;
+  font-family: helvetica;
+  color: white;
+}
+.container.pre-animation {
+  opacity:0;
+  max-height: 0;
+}
+
+
+
+/* pruebas */
+.animaciónMarcador{
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.5, 1.8, 0.1, 1.1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: animacionMarcador;
+  visibility: visible;
+}
+@keyframes animacionMarcador{
+  0% {
+      font-size:0em;
+  }
+  50%{
+      font-size: 2.5em;
+  }
+  100% {
+      font-size: 2em;
+  }
+}
